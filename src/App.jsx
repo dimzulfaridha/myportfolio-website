@@ -482,7 +482,7 @@ function App() {
             {/* Mobile Links - Visible only on Mobile */}
             <div className={`md:hidden flex items-center justify-center gap-2.5 sm:gap-4 text-[10px] sm:text-xs font-semibold text-slate-300 transition-all duration-500`}>
               <a href="#about" className="hover:text-white transition-colors">About</a>
-              <a href="#certificates" className="hover:text-white transition-colors">Certificates</a>
+              <a href="#showcase" className="hover:text-white transition-colors">Certificates</a>
               <a href="#contact" className="hover:text-white transition-colors">Contact</a>
             </div>
 
