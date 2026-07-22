@@ -597,26 +597,28 @@ function App() {
           </motion.div>
 
           {/* Mobile Buttons - Bottom row on Mobile */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.32, 0.72, 0, 1] }}
-            className="flex md:hidden gap-3 flex-row items-center justify-center w-full order-3 mt-4"
-          >
-            <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 font-semibold px-5 py-3 rounded-full transition-transform active:scale-95 flex items-center justify-center flex-1 max-w-[160px] text-sm">
-              Download CV
-            </a>
-            <div className="flex gap-2">
-              <a href="https://www.linkedin.com/in/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                <LinkedinLogo size={20} weight="fill" />
+          <motion.div style={{ y: heroY }} className="w-full order-3 md:hidden flex justify-center mt-2">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: [0.32, 0.72, 0, 1] }}
+              className="flex gap-3 flex-row items-center justify-center w-full"
+            >
+              <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 font-semibold px-5 py-3 rounded-full transition-transform active:scale-95 flex items-center justify-center flex-1 max-w-[160px] text-sm">
+                Download CV
               </a>
-              <a href="https://www.instagram.com/dimzulfar" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                <InstagramLogo size={20} weight="fill" />
-              </a>
-              <a href="https://github.com/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                <GithubLogo size={20} weight="fill" />
-              </a>
-            </div>
+              <div className="flex gap-2">
+                <a href="https://www.linkedin.com/in/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
+                  <LinkedinLogo size={20} weight="fill" />
+                </a>
+                <a href="https://www.instagram.com/dimzulfar" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
+                  <InstagramLogo size={20} weight="fill" />
+                </a>
+                <a href="https://github.com/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
+                  <GithubLogo size={20} weight="fill" />
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
         </section>
 
