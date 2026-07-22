@@ -567,7 +567,7 @@ function App() {
                   </motion.a>
                   <motion.a 
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
-                    href="https://www.instagram.com/dimzulfar?igsh=MWFnMDJqYXptd2NpYw%3D%3D" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3.5 rounded-full transition-all active:scale-95 flex items-center justify-center">
+                    href="https://www.instagram.com/dimzulfar" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3.5 rounded-full transition-all active:scale-95 flex items-center justify-center">
                     <InstagramLogo size={24} weight="fill" />
                   </motion.a>
                   <motion.a 
@@ -757,7 +757,7 @@ function App() {
           <p>&copy; 2026 Di Muhammad Zulfa Ridha. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="https://www.linkedin.com/in/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors bg-slate-900/50 p-3 rounded-full border border-slate-800/50 hover:border-slate-700"><LinkedinLogo size={24} /></a>
-            <a href="https://www.instagram.com/dimzulfar?igsh=MWFnMDJqYXptd2NpYw%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors bg-slate-900/50 p-3 rounded-full border border-slate-800/50 hover:border-slate-700"><InstagramLogo size={24} /></a>
+            <a href="https://www.instagram.com/dimzulfar" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors bg-slate-900/50 p-3 rounded-full border border-slate-800/50 hover:border-slate-700"><InstagramLogo size={24} /></a>
             <a href="https://github.com/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors bg-slate-900/50 p-3 rounded-full border border-slate-800/50 hover:border-slate-700"><GithubLogo size={24} /></a>
           </div>
         </footer>
