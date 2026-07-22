@@ -128,7 +128,7 @@ function App() {
       ],
       tags: ['Innovillage', 'Social Innovation', 'IoT Project'],
       institution: 'PT Telkom Indonesia dan Universitas Telkom',
-      link: 'https://coursera.org/verify/contoh-saja'
+      link: ''
     },
     {
       id: 2,
@@ -141,7 +141,7 @@ function App() {
       ],
       tags: ['PKM-KC', 'Research', 'IoT Project'],
       institution: 'Kemendikbudristek',
-      link: 'https://coursera.org/verify/contoh-saja'
+      link: ''
     },
     {
       id: 3,
@@ -154,7 +154,7 @@ function App() {
       ],
       tags: ['Bangkit Academy', 'Machine Learning'],
       institution: 'Bangkit Academy led by Google, Tokopedia, Gojek & Traveloka',
-      link: 'https://coursera.org/verify/contoh-saja'
+      link: ''
     },
     {
       id: 4,
