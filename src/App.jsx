@@ -461,36 +461,37 @@ function App() {
 
       {/* Floating Navigation */}
       <motion.nav
-        className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-300 ease-out ${scrolled ? "top-4 px-4 md:top-6" : "top-0 px-4 pt-4 md:top-8 md:px-4"}`}
+        className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 ${scrolled ? "top-3 md:top-6 px-8 md:px-6" : "top-3 md:top-8 px-2 md:px-4"
+          }`}
       >
         <motion.div
           layout
-          transition={{ type: "spring", stiffness: 200, damping: 25 }}
-          className={`flex flex-col w-full transition-all duration-300 ease-out ${scrolled
+          transition={{ type: "spring", stiffness: 400, damping: 40 }}
+          className={`flex flex-col w-full transition-colors duration-700 ease-out ${scrolled
             ? "max-w-2xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-2xl shadow-black/50 rounded-full"
             : "max-w-7xl bg-transparent border-transparent rounded-none md:rounded-full"
             }`}
         >
-          <div className={`flex justify-between items-center w-full gap-4 transition-all duration-300 ease-out ${scrolled ? "px-5 py-3 md:px-6 md:py-3" : "px-0 py-2 md:px-2 md:py-2"}`}>
-            <a href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-white flex items-center gap-2 md:gap-3 shrink-0 hover:text-accent transition-colors">
+          <motion.div layout className={`flex justify-between items-center w-full gap-2 md:gap-4 ${scrolled ? "px-4 py-3 md:px-6 md:py-3" : "px-2 py-3 md:px-2 md:py-2"}`}>
+            <motion.a layout href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-white flex items-center gap-1.5 md:gap-3 shrink-0 hover:text-accent transition-colors">
               <Sparkle size={18} weight="fill" className="text-accent md:w-[24px] md:h-[24px]" />
               <span className="hidden md:inline">Di Muhammad Zulfa Ridha</span>
               <span className="md:hidden">Zulfa</span>
-            </a>
+            </motion.a>
 
             {/* Mobile Links - Visible only on Mobile */}
-            <div className={`md:hidden flex-1 flex items-center justify-end gap-3.5 font-semibold text-slate-300 transition-all duration-500 text-sm`}>
+            <motion.div layout className={`md:hidden flex-1 flex items-center justify-end gap-3 font-semibold text-slate-300 transition-colors duration-500 text-sm whitespace-nowrap`}>
               <a href="#about" className="hover:text-white transition-colors">About</a>
               <a href="#showcase" className="hover:text-white transition-colors">Certificates</a>
               <a href="#contact" className="hover:text-white transition-colors">Contact</a>
-            </div>
+            </motion.div>
 
-            <div className="hidden md:flex items-center shrink-0">
-              <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 md:px-8 md:py-3.5 rounded-full md:text-sm font-bold transition-all active:scale-95 shadow-sm whitespace-nowrap">
+            <motion.div layout className="hidden md:flex items-center shrink-0">
+              <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 md:px-8 md:py-3.5 rounded-full md:text-sm font-bold transition-transform active:scale-95 shadow-sm whitespace-nowrap">
                 <span className="hidden md:inline">Download CV</span>
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </motion.nav>
 
@@ -498,8 +499,8 @@ function App() {
       <div
         className={`fixed bottom-8 left-0 right-0 z-40 flex justify-center pointer-events-none transition-opacity duration-700 ease-in-out ${scrolled ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
       >
-        <div className="flex flex-col items-center gap-1 text-slate-300">
-          <span className="text-sm font-bold text-white bg-slate-950/40 px-3 py-0.5 rounded-full backdrop-blur-sm border border-slate-800/50 shadow-md">Scroll</span>
+        <div className="flex flex-col items-center gap-2 text-slate-300">
+          <span className="text-sm font-bold text-white bg-slate-900/80 px-4 py-1.5 rounded-full backdrop-blur-md border border-slate-700/50 shadow-lg tracking-wide">Scroll</span>
 
           {/* Desktop Mouse Icon */}
           <div className="hidden md:flex w-6 h-10 rounded-full border-2 border-slate-400 justify-center p-1 mt-1">
@@ -516,17 +517,17 @@ function App() {
               animate={{ y: [0, 8, 0], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <CaretDown size={28} weight="bold" className="text-white drop-shadow-md" />
+              <CaretDown size={28} weight="bold" className="text-accent drop-shadow-md" />
             </motion.div>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10 md:pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 md:pt-28">
 
         {/* Hero Section */}
-        <section className="min-h-[calc(100vh-140px)] pb-28 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative mb-8">
+        <section className="min-h-[calc(100vh-140px)] pb-40 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-16 md:gap-12 relative mb-12">
           <motion.div
-            className="flex-1 text-center md:text-left flex flex-col items-center md:items-start order-1 md:order-1"
+            className="flex-1 text-left"
             style={{ y: heroY }}
           >
             <motion.div
@@ -540,39 +541,39 @@ function App() {
                 }
               }}
             >
-              <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }} className="flex flex-col items-center md:items-start">
+              <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}>
                 <Badge variant="primary" className="mb-3 md:mb-6 inline-flex"><Sparkle size={14} className="mr-1" /> Available for work</Badge>
                 <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1] mb-3 md:mb-6">
                   Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">Zulfa.</span><br />
                   I build digital <br />
                   <span className="text-accent">experiences.</span>
                 </h1>
-                <p className="text-lg md:text-xl text-slate-400 max-w-xl mb-2 md:mb-10 leading-relaxed font-light">
+                <p className="text-lg md:text-xl text-slate-400 max-w-xl mb-4 md:mb-10 leading-relaxed font-light">
                   A passionate tech enthusiast specializing in Machine Learning, Web Development, UI/UX Design, and Creative Media.
                 </p>
               </motion.div>
-              <div className="hidden md:flex gap-5 flex-row items-center justify-start w-full">
-                {/* Desktop Button */}
+              <div className="flex gap-2.5 md:gap-4 items-center">
+                {/* Mobile Button (CV Download) */}
                 <motion.a 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
-                  href="#about" className="bg-white hover:bg-slate-200 text-slate-950 font-semibold px-8 py-3.5 rounded-full transition-transform active:scale-95 flex items-center justify-center gap-2">
-                  Let's Go <PaperPlaneRight weight="bold" />
+                  href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="md:hidden bg-white hover:bg-slate-200 text-slate-950 font-semibold px-5 py-2.5 rounded-full transition-transform active:scale-95 inline-flex items-center justify-center gap-2 text-[13px] whitespace-nowrap">
+                  Download CV
                 </motion.a>
-                <div className="flex gap-3">
+                <div className="flex gap-2 md:gap-3">
                   <motion.a 
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
-                    href="https://www.linkedin.com/in/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3.5 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                    <LinkedinLogo size={24} weight="fill" />
+                    href="https://www.linkedin.com/in/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-2.5 md:p-3.5 rounded-full transition-all active:scale-95 flex items-center justify-center">
+                    <LinkedinLogo size={20} weight="fill" className="md:w-6 md:h-6" />
                   </motion.a>
                   <motion.a 
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
-                    href="https://www.instagram.com/dimzulfar" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3.5 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                    <InstagramLogo size={24} weight="fill" />
+                    href="https://www.instagram.com/dimzulfar" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-2.5 md:p-3.5 rounded-full transition-all active:scale-95 flex items-center justify-center">
+                    <InstagramLogo size={20} weight="fill" className="md:w-6 md:h-6" />
                   </motion.a>
                   <motion.a 
                     variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
-                    href="https://github.com/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3.5 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                    <GithubLogo size={24} weight="fill" />
+                    href="https://github.com/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-2.5 md:p-3.5 rounded-full transition-all active:scale-95 flex items-center justify-center">
+                    <GithubLogo size={20} weight="fill" className="md:w-6 md:h-6" />
                   </motion.a>
                 </div>
               </div>
@@ -584,41 +585,16 @@ function App() {
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
             style={{ y: heroY, scale: heroScale }}
-            className="flex-shrink-0 relative group order-2 md:order-2"
+            className="flex-shrink-0 relative group"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-blue-500/20 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-            <div className="w-56 h-56 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-slate-800/50 relative z-10 shadow-2xl">
+            <div className="w-64 h-64 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-slate-800/50 relative z-10 shadow-2xl">
               <img src="/profile.jpg.jpeg" alt="Di Muhammad Zulfa Ridha" className="w-full h-full object-cover grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-slate-900 border border-slate-800 px-4 py-2 rounded-2xl flex items-center gap-2 z-20 shadow-xl">
               <MapPin className="text-accent" weight="fill" />
               <span className="text-xs font-semibold text-slate-200">Banda Aceh, ID</span>
             </div>
-          </motion.div>
-
-          {/* Mobile Buttons - Bottom row on Mobile */}
-          <motion.div style={{ y: heroY }} className="w-full order-3 md:hidden flex justify-center mt-2">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: [0.32, 0.72, 0, 1] }}
-              className="flex gap-3 flex-row items-center justify-center w-full"
-            >
-              <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 font-semibold px-5 py-3 rounded-full transition-transform active:scale-95 flex items-center justify-center flex-1 max-w-[160px] text-sm">
-                Download CV
-              </a>
-              <div className="flex gap-2">
-                <a href="https://www.linkedin.com/in/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                  <LinkedinLogo size={20} weight="fill" />
-                </a>
-                <a href="https://www.instagram.com/dimzulfar" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                  <InstagramLogo size={20} weight="fill" />
-                </a>
-                <a href="https://github.com/dimzulfaridha" target="_blank" rel="noopener noreferrer" className="bg-slate-900 border border-slate-800 hover:bg-slate-800 hover:text-accent hover:border-accent/50 text-slate-300 p-3 rounded-full transition-all active:scale-95 flex items-center justify-center">
-                  <GithubLogo size={20} weight="fill" />
-                </a>
-              </div>
-            </motion.div>
           </motion.div>
         </section>
 
