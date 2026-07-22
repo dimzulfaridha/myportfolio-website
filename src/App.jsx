@@ -521,7 +521,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 md:pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10 md:pt-20">
 
         {/* Hero Section */}
         <section className="min-h-[calc(100vh-140px)] pb-28 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative mb-8">
