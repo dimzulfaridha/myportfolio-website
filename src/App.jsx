@@ -498,13 +498,13 @@ function App() {
 
       {/* Scroll Down Indicator */}
       <div
-        className={`fixed bottom-2 md:bottom-8 left-0 right-0 z-50 flex justify-center pointer-events-none transition-opacity duration-700 ease-in-out ${scrolled ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
+        className={`fixed bottom-8 left-0 right-0 z-40 flex justify-center pointer-events-none transition-opacity duration-700 ease-in-out ${scrolled ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
       >
-        <div className="flex flex-col items-center gap-1 md:gap-2 text-slate-300">
-          <span className="text-[10px] md:text-xs font-bold md:font-medium text-white md:text-slate-400 tracking-wider bg-black/40 md:bg-transparent px-3 py-1 md:px-0 md:py-0 rounded-full backdrop-blur-md md:backdrop-blur-none border border-white/10 md:border-transparent drop-shadow-lg">Scroll</span>
+        <div className="flex flex-col items-center gap-1 text-slate-300">
+          <span className="text-sm font-bold text-accent bg-slate-950/40 px-3 py-0.5 rounded-full backdrop-blur-sm border border-slate-800/50 shadow-md">Scroll</span>
 
           {/* Desktop Mouse Icon */}
-          <div className="hidden md:flex w-6 h-10 rounded-full border-2 border-slate-400 justify-center p-1">
+          <div className="hidden md:flex w-6 h-10 rounded-full border-2 border-slate-400 justify-center p-1 mt-1">
             <motion.div
               animate={{ y: [0, 16], opacity: [1, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut" }}
@@ -513,12 +513,12 @@ function App() {
           </div>
 
           {/* Mobile Arrow Icon */}
-          <div className="md:hidden flex flex-col items-center justify-center">
+          <div className="md:hidden flex flex-col items-center justify-center mt-0.5">
             <motion.div
-              animate={{ y: [4, -4, 4], opacity: [0.3, 1, 0.3] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ y: [0, 8, 0], opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <CaretUp size={20} weight="bold" className="text-accent" />
+              <CaretDown size={28} weight="bold" className="text-accent drop-shadow-md" />
             </motion.div>
           </div>
         </div>
