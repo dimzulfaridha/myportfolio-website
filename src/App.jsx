@@ -235,7 +235,7 @@ function App() {
 
   const educationContent = (
     <div id="education" className="scroll-mt-32">
-      <BentoCard delay={0.2}>
+      <BentoCard delay={0.1}>
         <div className="flex items-center gap-3 mb-6">
           <GraduationCap size={24} className="text-white" />
           <h2 className="text-xl font-bold text-white">Education</h2>
@@ -259,7 +259,7 @@ function App() {
 
   const experienceContent = (
     <div id="experience" className="scroll-mt-32">
-      <BentoCard delay={0.3}>
+      <BentoCard delay={0.1}>
         <div className="flex items-center gap-3 mb-6">
           <Briefcase size={24} className="text-white" />
           <h2 className="text-xl font-bold text-white">Experience</h2>
@@ -354,7 +354,7 @@ function App() {
     </div>
   );
   const showcaseContent = (
-    <BentoCard delay={0.4} className="h-full" innerClassName="flex flex-col h-full">
+    <BentoCard delay={0.1} className="h-full" innerClassName="flex flex-col h-full">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-white">Certifications & Awards</h2>
         <div className="flex gap-2">
@@ -461,32 +461,33 @@ function App() {
 
       {/* Floating Navigation */}
       <motion.nav
-        className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 ${scrolled ? "top-3 md:top-6 px-8 md:px-6" : "top-3 md:top-8 px-2 md:px-4"
-          }`}
+        layout
+        transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
+        className={`fixed left-0 right-0 z-50 flex justify-center ${scrolled ? "top-3 md:top-6 px-4 md:px-6" : "top-3 md:top-8 px-2 md:px-4"}`}
       >
         <motion.div
           layout
-          transition={{ type: "spring", stiffness: 400, damping: 40 }}
-          className={`flex flex-col w-full transition-colors duration-700 ease-out ${scrolled
-            ? "max-w-2xl bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-2xl shadow-black/50 rounded-full"
+          transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
+          className={`flex flex-col w-full overflow-hidden ${scrolled
+            ? "max-w-2xl bg-slate-900/30 backdrop-blur-lg border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] rounded-full"
             : "max-w-7xl bg-transparent border-transparent rounded-none md:rounded-full"
             }`}
         >
-          <motion.div layout className={`flex justify-between items-center w-full gap-2 md:gap-4 ${scrolled ? "px-4 py-3 md:px-6 md:py-3" : "px-2 py-3 md:px-2 md:py-2"}`}>
-            <motion.a layout href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-white flex items-center gap-1.5 md:gap-3 shrink-0 hover:text-accent transition-colors">
-              <Sparkle size={18} weight="fill" className="text-accent md:w-[24px] md:h-[24px]" />
+          <motion.div layout transition={{ type: "spring", bounce: 0.15, duration: 0.6 }} className={`flex justify-between items-center w-full gap-2 md:gap-4 ${scrolled ? "px-4 py-3 md:px-6 md:py-3" : "px-2 py-3 md:px-2 md:py-2"}`}>
+            <motion.a layout="position" transition={{ type: "spring", bounce: 0.15, duration: 0.6 }} href="#" className={`text-xl md:text-2xl font-bold tracking-tighter text-white items-center gap-1.5 md:gap-3 shrink-0 ${scrolled ? 'hidden md:flex' : 'flex'}`}>
               <span className="hidden md:inline">Di Muhammad Zulfa Ridha</span>
-              <span className="md:hidden">Zulfa</span>
+              <span className="md:hidden">Zulfa Ridha</span>
             </motion.a>
 
             {/* Mobile Links - Visible only on Mobile */}
-            <motion.div layout className={`md:hidden flex-1 flex items-center justify-end gap-3 font-semibold text-slate-300 transition-colors duration-500 text-sm whitespace-nowrap`}>
+            <motion.div layout="position" transition={{ type: "spring", bounce: 0.15, duration: 0.6 }} className={`md:hidden flex-1 flex items-center gap-3 font-semibold text-slate-300 text-sm whitespace-nowrap ${scrolled ? 'justify-center' : 'justify-end'}`}>
+              <a href="#" className={`hover:text-white transition-colors ${scrolled ? 'block' : 'hidden'}`}>Home</a>
               <a href="#about" className="hover:text-white transition-colors">About</a>
               <a href="#showcase" className="hover:text-white transition-colors">Certificates</a>
               <a href="#contact" className="hover:text-white transition-colors">Contact</a>
             </motion.div>
 
-            <motion.div layout className="hidden md:flex items-center shrink-0">
+            <motion.div layout="position" transition={{ type: "spring", bounce: 0.15, duration: 0.6 }} className="hidden md:flex items-center shrink-0">
               <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 md:px-8 md:py-3.5 rounded-full md:text-sm font-bold transition-transform active:scale-95 shadow-sm whitespace-nowrap">
                 <span className="hidden md:inline">Download CV</span>
               </a>
@@ -712,7 +713,7 @@ function App() {
 
         {/* Contact (12) */}
         <div id="contact" className="lg:col-span-12 scroll-mt-32 mt-6">
-          <BentoCard delay={0.6} innerClassName="py-6 px-5 md:py-16 md:px-12">
+          <BentoCard delay={0.1} innerClassName="py-6 px-5 md:py-16 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 items-center">
               <div>
                 <h2 className="text-3xl md:text-5xl font-black text-white mb-2 md:mb-6 leading-tight">Let's Connect & <span className="text-accent">Collaborate</span></h2>
