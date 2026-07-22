@@ -472,23 +472,23 @@ function App() {
             : "max-w-7xl bg-transparent border-transparent rounded-none md:rounded-full"
             }`}
         >
-          <div className={`flex justify-between items-center w-full gap-4 ${scrolled ? "px-5 py-3 md:px-6 md:py-3" : "px-5 py-3 md:px-2 md:py-2"}`}>
-            <a href="#" className="text-base md:text-2xl font-bold tracking-tighter text-white flex items-center gap-2 md:gap-3 shrink-0 hover:text-accent transition-colors">
-              <Sparkle weight="fill" className="text-accent w-[16px] h-[16px] md:w-[24px] md:h-[24px]" />
+          <div className={`flex justify-between items-center w-full gap-4 ${scrolled ? "px-4 py-3 md:px-6 md:py-3" : "px-4 py-3 md:px-2 md:py-2"}`}>
+            <a href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-white flex items-center gap-2 md:gap-3 shrink-0 hover:text-accent transition-colors">
+              <Sparkle size={18} weight="fill" className="text-accent md:w-[24px] md:h-[24px]" />
               <span className="hidden md:inline">Di Muhammad Zulfa Ridha</span>
               <span className="md:hidden">Zulfa</span>
             </a>
 
             {/* Mobile Links - Visible only on Mobile */}
-            <div className={`md:hidden flex items-center justify-end gap-3 font-semibold text-slate-300 transition-all duration-500 text-xs`}>
+            <div className={`md:hidden flex-1 flex items-center justify-end gap-3.5 font-semibold text-slate-300 transition-all duration-500 text-sm`}>
               <a href="#about" className="hover:text-white transition-colors">About</a>
               <a href="#showcase" className="hover:text-white transition-colors">Certificates</a>
               <a href="#contact" className="hover:text-white transition-colors">Contact</a>
             </div>
 
             <div className="hidden md:flex items-center shrink-0">
-              <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 px-8 py-3.5 rounded-full text-sm font-bold transition-all active:scale-95 shadow-sm whitespace-nowrap">
-                Download CV
+              <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 md:px-8 md:py-3.5 rounded-full md:text-sm font-bold transition-all active:scale-95 shadow-sm whitespace-nowrap">
+                <span className="hidden md:inline">Download CV</span>
               </a>
             </div>
           </div>
@@ -553,18 +553,17 @@ function App() {
                 </p>
               </motion.div>
               <div className="flex gap-4 items-center flex-wrap">
-                {/* Desktop Button: Let's Go */}
+                {/* Desktop Button */}
                 <motion.a 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
                   href="#about" className="hidden md:inline-flex bg-white hover:bg-slate-200 text-slate-950 font-semibold px-8 py-3.5 rounded-full transition-transform active:scale-95 items-center justify-center gap-2">
                   Let's Go <PaperPlaneRight weight="bold" />
                 </motion.a>
-                
-                {/* Mobile Button: Download CV */}
+                {/* Mobile Button */}
                 <motion.a 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
                   href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="md:hidden bg-white hover:bg-slate-200 text-slate-950 font-semibold px-8 py-3.5 rounded-full transition-transform active:scale-95 inline-flex items-center justify-center gap-2">
-                  Download CV <PaperPlaneRight weight="bold" />
+                  Download CV
                 </motion.a>
                 <div className="flex gap-3">
                   <motion.a 
