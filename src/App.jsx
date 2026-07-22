@@ -461,8 +461,7 @@ function App() {
 
       {/* Floating Navigation */}
       <motion.nav
-        className={`fixed left-0 right-0 z-50 flex justify-center px-4 transition-all duration-500 ${scrolled ? "top-6 md:top-6" : "top-6 md:top-8"
-          }`}
+        className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 ${scrolled ? "top-4 px-4 md:top-6" : "top-0 px-4 pt-4 md:top-8 md:px-4"}`}
       >
         <motion.div
           layout
@@ -472,7 +471,7 @@ function App() {
             : "max-w-7xl bg-transparent border-transparent rounded-none md:rounded-full"
             }`}
         >
-          <div className={`flex justify-between items-center w-full gap-4 ${scrolled ? "px-2 py-3 md:px-6 md:py-3" : "px-2 py-3 md:px-2 md:py-2"}`}>
+          <div className={`flex justify-between items-center w-full gap-4 ${scrolled ? "px-5 py-3 md:px-6 md:py-3" : "px-0 py-2 md:px-2 md:py-2"}`}>
             <a href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-white flex items-center gap-2 md:gap-3 shrink-0 hover:text-accent transition-colors">
               <Sparkle size={18} weight="fill" className="text-accent md:w-[24px] md:h-[24px]" />
               <span className="hidden md:inline">Di Muhammad Zulfa Ridha</span>
