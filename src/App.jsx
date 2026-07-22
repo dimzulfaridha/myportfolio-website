@@ -525,9 +525,9 @@ function App() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 md:pt-20">
 
         {/* Hero Section */}
-        <section className="min-h-[calc(100vh-140px)] pb-16 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 relative mb-8">
+        <section className="min-h-[calc(100vh-140px)] pb-28 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-12 relative mb-8">
           <motion.div
-            className="flex-1 text-left"
+            className="flex-1 text-center md:text-left flex flex-col items-center md:items-start"
             style={{ y: heroY }}
           >
             <motion.div
@@ -541,7 +541,7 @@ function App() {
                 }
               }}
             >
-              <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}>
+              <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }} className="flex flex-col items-center md:items-start">
                 <Badge variant="primary" className="mb-3 md:mb-6 inline-flex"><Sparkle size={14} className="mr-1" /> Available for work</Badge>
                 <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.1] mb-6">
                   Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">Zulfa.</span><br />
@@ -552,7 +552,7 @@ function App() {
                   A passionate tech enthusiast specializing in Machine Learning, Web Development, UI/UX Design, and Creative Media.
                 </p>
               </motion.div>
-              <div className="flex gap-4 items-center flex-wrap">
+              <div className="flex gap-5 flex-col md:flex-row items-center justify-center md:justify-start w-full">
                 {/* Desktop Button */}
                 <motion.a 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
