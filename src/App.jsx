@@ -472,7 +472,7 @@ function App() {
             : "max-w-7xl bg-transparent border-transparent rounded-none md:rounded-full"
             }`}
         >
-          <div className={`flex justify-between items-center w-full gap-4 ${scrolled ? "px-4 py-3 md:px-6 md:py-3" : "px-4 py-3 md:px-2 md:py-2"}`}>
+          <div className={`flex justify-between items-center w-full gap-4 ${scrolled ? "px-2 py-3 md:px-6 md:py-3" : "px-2 py-3 md:px-2 md:py-2"}`}>
             <a href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-white flex items-center gap-2 md:gap-3 shrink-0 hover:text-accent transition-colors">
               <Sparkle size={18} weight="fill" className="text-accent md:w-[24px] md:h-[24px]" />
               <span className="hidden md:inline">Di Muhammad Zulfa Ridha</span>
@@ -500,7 +500,7 @@ function App() {
         className={`fixed bottom-8 left-0 right-0 z-40 flex justify-center pointer-events-none transition-opacity duration-700 ease-in-out ${scrolled ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
       >
         <div className="flex flex-col items-center gap-1 text-slate-300">
-          <span className="text-sm font-bold text-accent bg-slate-950/40 px-3 py-0.5 rounded-full backdrop-blur-sm border border-slate-800/50 shadow-md">Scroll</span>
+          <span className="text-sm font-bold text-white bg-slate-950/40 px-3 py-0.5 rounded-full backdrop-blur-sm border border-slate-800/50 shadow-md">Scroll</span>
 
           {/* Desktop Mouse Icon */}
           <div className="hidden md:flex w-6 h-10 rounded-full border-2 border-slate-400 justify-center p-1 mt-1">
@@ -517,15 +517,15 @@ function App() {
               animate={{ y: [0, 8, 0], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <CaretDown size={28} weight="bold" className="text-accent drop-shadow-md" />
+              <CaretDown size={28} weight="bold" className="text-white drop-shadow-md" />
             </motion.div>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 md:pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 md:pt-20">
 
         {/* Hero Section */}
-        <section className="min-h-[calc(100vh-140px)] pb-40 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-16 md:gap-12 relative mb-12">
+        <section className="min-h-[calc(100vh-140px)] pb-16 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 relative mb-8">
           <motion.div
             className="flex-1 text-left"
             style={{ y: heroY }}
@@ -548,7 +548,7 @@ function App() {
                   I build digital <br />
                   <span className="text-accent">experiences.</span>
                 </h1>
-                <p className="text-lg md:text-xl text-slate-400 max-w-xl mb-10 leading-relaxed font-light">
+                <p className="text-lg md:text-xl text-slate-400 max-w-xl mb-8 md:mb-10 leading-relaxed font-light">
                   A passionate tech enthusiast specializing in Machine Learning, Web Development, UI/UX Design, and Creative Media.
                 </p>
               </motion.div>
