@@ -497,7 +497,7 @@ function App() {
 
       {/* Scroll Down Indicator */}
       <div
-        className={`fixed bottom-8 left-0 right-0 z-40 flex justify-center pointer-events-none transition-opacity duration-700 ease-in-out ${scrolled ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
+        className={`fixed bottom-2 md:bottom-8 left-0 right-0 z-40 flex justify-center pointer-events-none transition-opacity duration-700 ease-in-out ${scrolled ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
       >
         <div className="flex flex-col items-center gap-2 text-slate-300">
           <span className="text-sm font-bold text-white bg-slate-900/80 px-4 py-1.5 rounded-full backdrop-blur-md border border-slate-700/50 shadow-lg tracking-wide">Scroll</span>
@@ -512,12 +512,12 @@ function App() {
           </div>
 
           {/* Mobile Arrow Icon */}
-          <div className="md:hidden flex flex-col items-center justify-center mt-0.5">
+          <div className="md:hidden flex flex-col items-center justify-center -mt-2">
             <motion.div
               animate={{ y: [0, 8, 0], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <CaretDown size={28} weight="bold" className="text-accent drop-shadow-md" />
+              <CaretUp size={20} weight="bold" className="text-accent drop-shadow-md" />
             </motion.div>
           </div>
         </div>
@@ -591,9 +591,9 @@ function App() {
             <div className="w-64 h-64 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-4 border-slate-800/50 relative z-10 shadow-2xl">
               <img src="/profile.jpg.jpeg" alt="Di Muhammad Zulfa Ridha" className="w-full h-full object-cover grayscale-0 md:grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-slate-900 border border-slate-800 px-4 py-2 rounded-2xl flex items-center gap-2 z-20 shadow-xl">
-              <MapPin className="text-accent" weight="fill" />
-              <span className="text-xs font-semibold text-slate-200">Banda Aceh, ID</span>
+            <div className="absolute bottom-4 -right-4 md:bottom-2 md:right-0 lg:bottom-4 lg:right-4 bg-slate-900/90 backdrop-blur-sm border border-slate-800 px-4 py-2 md:px-6 md:py-3 rounded-full flex items-center gap-2 md:gap-3 z-20 shadow-xl">
+              <MapPin className="text-accent w-4 h-4 md:w-5 md:h-5" weight="fill" />
+              <span className="text-xs md:text-[15px] font-semibold text-slate-200">Banda Aceh, ID</span>
             </div>
           </motion.div>
         </section>
