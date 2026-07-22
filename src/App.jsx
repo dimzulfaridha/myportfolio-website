@@ -472,24 +472,23 @@ function App() {
             : "max-w-7xl bg-transparent border-transparent rounded-none md:rounded-full"
             }`}
         >
-          <div className={`flex justify-between items-center w-full gap-2 ${scrolled ? "px-3 py-2 md:px-6 md:py-3" : "px-3 py-2 md:px-2 md:py-2"}`}>
-            <a href="#" className="text-sm md:text-2xl font-bold tracking-tighter text-white flex items-center gap-1 md:gap-3 shrink-0 hover:text-accent transition-colors">
-              <Sparkle size={14} weight="fill" className="text-accent md:w-[24px] md:h-[24px]" />
+          <div className={`flex justify-between items-center w-full gap-4 ${scrolled ? "px-5 py-3 md:px-6 md:py-3" : "px-5 py-3 md:px-2 md:py-2"}`}>
+            <a href="#" className="text-base md:text-2xl font-bold tracking-tighter text-white flex items-center gap-2 md:gap-3 shrink-0 hover:text-accent transition-colors">
+              <Sparkle weight="fill" className="text-accent w-[16px] h-[16px] md:w-[24px] md:h-[24px]" />
               <span className="hidden md:inline">Di Muhammad Zulfa Ridha</span>
               <span className="md:hidden">Zulfa</span>
             </a>
 
             {/* Mobile Links - Visible only on Mobile */}
-            <div className={`md:hidden flex items-center justify-center gap-2.5 sm:gap-4 text-[10px] sm:text-xs font-semibold text-slate-300 transition-all duration-500`}>
+            <div className={`md:hidden flex items-center justify-end gap-3 font-semibold text-slate-300 transition-all duration-500 text-xs`}>
               <a href="#about" className="hover:text-white transition-colors">About</a>
               <a href="#showcase" className="hover:text-white transition-colors">Certificates</a>
               <a href="#contact" className="hover:text-white transition-colors">Contact</a>
             </div>
 
-            <div className="flex items-center shrink-0">
-              <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 px-4 py-1.5 md:px-8 md:py-3.5 rounded-full text-[10px] md:text-sm font-bold transition-all active:scale-95 shadow-sm whitespace-nowrap">
-                <span className="md:hidden">CV</span>
-                <span className="hidden md:inline">Download CV</span>
+            <div className="hidden md:flex items-center shrink-0">
+              <a href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 px-8 py-3.5 rounded-full text-sm font-bold transition-all active:scale-95 shadow-sm whitespace-nowrap">
+                Download CV
               </a>
             </div>
           </div>
@@ -523,7 +522,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 md:pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 md:pt-20">
 
         {/* Hero Section */}
         <section className="min-h-[calc(100vh-140px)] pb-40 md:pb-12 flex flex-col md:flex-row items-center justify-between gap-16 md:gap-12 relative mb-12">
@@ -556,8 +555,8 @@ function App() {
               <div className="flex gap-4 items-center flex-wrap">
                 <motion.a 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
-                  href="#about" className="bg-white hover:bg-slate-200 text-slate-950 font-semibold px-8 py-3.5 rounded-full transition-transform active:scale-95 inline-flex items-center justify-center gap-2">
-                  Let's Go <PaperPlaneRight weight="bold" />
+                  href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 font-semibold px-8 py-3.5 rounded-full transition-transform active:scale-95 inline-flex items-center justify-center gap-2">
+                  Download CV <PaperPlaneRight weight="bold" />
                 </motion.a>
                 <div className="flex gap-3">
                   <motion.a 
