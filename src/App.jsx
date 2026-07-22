@@ -553,9 +553,17 @@ function App() {
                 </p>
               </motion.div>
               <div className="flex gap-4 items-center flex-wrap">
+                {/* Desktop Button: Let's Go */}
                 <motion.a 
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
-                  href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="bg-white hover:bg-slate-200 text-slate-950 font-semibold px-8 py-3.5 rounded-full transition-transform active:scale-95 inline-flex items-center justify-center gap-2">
+                  href="#about" className="hidden md:inline-flex bg-white hover:bg-slate-200 text-slate-950 font-semibold px-8 py-3.5 rounded-full transition-transform active:scale-95 items-center justify-center gap-2">
+                  Let's Go <PaperPlaneRight weight="bold" />
+                </motion.a>
+                
+                {/* Mobile Button: Download CV */}
+                <motion.a 
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] } } }}
+                  href="/CV a.n Di Muhammad Zulfa Ridha.pdf" download="CV a.n Di Muhammad Zulfa Ridha.pdf" className="md:hidden bg-white hover:bg-slate-200 text-slate-950 font-semibold px-8 py-3.5 rounded-full transition-transform active:scale-95 inline-flex items-center justify-center gap-2">
                   Download CV <PaperPlaneRight weight="bold" />
                 </motion.a>
                 <div className="flex gap-3">
