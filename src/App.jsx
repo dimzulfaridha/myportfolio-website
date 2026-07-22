@@ -498,10 +498,10 @@ function App() {
 
       {/* Scroll Down Indicator */}
       <div
-        className={`fixed bottom-8 left-0 right-0 z-40 flex justify-center pointer-events-none transition-opacity duration-700 ease-in-out ${scrolled ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
+        className={`fixed bottom-2 md:bottom-8 left-0 right-0 z-50 flex justify-center pointer-events-none transition-opacity duration-700 ease-in-out ${scrolled ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}
       >
-        <div className="flex flex-col items-center gap-2 text-slate-300">
-          <span className="text-xs font-medium text-slate-400">Scroll</span>
+        <div className="flex flex-col items-center gap-1 md:gap-2 text-slate-300">
+          <span className="text-[10px] md:text-xs font-bold md:font-medium text-white md:text-slate-400 tracking-wider bg-black/40 md:bg-transparent px-3 py-1 md:px-0 md:py-0 rounded-full backdrop-blur-md md:backdrop-blur-none border border-white/10 md:border-transparent drop-shadow-lg">Scroll</span>
 
           {/* Desktop Mouse Icon */}
           <div className="hidden md:flex w-6 h-10 rounded-full border-2 border-slate-400 justify-center p-1">
